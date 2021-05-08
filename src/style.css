@@ -53,6 +53,11 @@ h5 {
   margin-top: 15px;
 }
 
+p {
+  font-family: "Courier New", Courier, monospace;
+  padding-top: 10px;
+}
+
 /* SECTIONS */
 section,
 div {
