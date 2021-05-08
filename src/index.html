@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="./src/style.css" />
+
+    <title>Weather or Not</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img
+          class="logo"
+          src="/media/weatherornotlogopink.png"
+          width="250px"
+          alt="Weather or Not Logo"
+        />
+      </a>
+      <div id="search-block">
+        <form id="search-bar">
+          <input
+            type="text"
+            id="city-input"
+            placeholder="Enter a city name"
+            autocomplete="off"
+          />
+          <button id="search-button">Search</button>
+          <button id="current-button">Current Location</button>
+        </form>
+      </div>
+    </header>
+    <section id="weather-results">
+      <div id="current-block">
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <div class="card">
+                <div class="card-body">
+                  <i class="bi bi-sun"></i>
+                  <h3 id="feels-like"><strong>Feels like:</strong></h3>
+                  <h3 id="feels-temp"></h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-9">
+              <div class="row">
+                <h1 id="current-header">Search for a city</h1>
+                <h2 id="current-time">Day, Month Date, Hour: Minutes</h2>
+              </div>
+              <div class="row">
+                <div class="col-md">
+                  <div class="card">
+                    <div id="high-low-wind" class="card-body">
+                      <i class="bi bi-thermometer-high"></i>
+
+                      <h4><strong>High of</strong></h4>
+                      <h4 id="temp-high"></h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="card">
+                    <div id="high-low-wind" class="card-body">
+                      <i class="bi bi-wind"></i>
+                      <h4><strong>Wind Speed</strong></h4>
+                      <h4 id="wind-speed"></h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="card">
+                    <div id="high-low-wind" class="card-body">
+                      <i class="bi bi-moisture"></i>
+                      <h4><strong>Humidity</strong></h4>
+                      <h4 id="humidity"></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <div id="forecast-section" class="container">
+      <div class="row row-cols-3">
+        <div class="col-md forecast-col">
+          <div class="card">
+            <div class="card-body">
+              <h5>Tomorrow</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md forecast-col">
+          <div class="card">
+            <div class="card-body">
+              <h5>The next day</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md forecast-col">
+          <div class="card">
+            <div class="card-body">
+              <h5>The day after that</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <section id="conversion-section">
+      <div id="conversion-block">
+        <form id="conversion">
+          <button id="reset-conversion" type="reset">Reset</button>
+          <input type="number" id="temp-input" placeholder="0°" />
+          <button id="celsius-button">to °C</button>
+          <button id="farenheit-button">to °F</button>
+          <br />
+        </form>
+
+        <h3 id="converted-temp"></h3>
+      </div>
+    </section>
+
+    <script src="./src/index.js"></script>
+  </body>
+</html>
