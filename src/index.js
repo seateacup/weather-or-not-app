@@ -47,6 +47,8 @@ function updateTemperature(response) {
     let humidity = response.data.main.humidity;
     let updateHumidity = document.querySelector("#humidity");
     updateHumidity.innerHTML = `${humidity}%`
+
+    
 }
 
 function updateLocation(event) {
@@ -120,3 +122,4 @@ toC.addEventListener("click", fToC);
 
 let toF = document.querySelector("#farenheit-button");
 toF.addEventListener("click", cToF);
+

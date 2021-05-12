@@ -3,6 +3,10 @@ body {
   text-align: center;
 }
 
+header {
+  margin-top: 50px;
+}
+
 /* LOGO */
 img.logo {
   display: block;
